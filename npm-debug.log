@@ -1,0 +1,127 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'update',
+1 verbose cli   '-g',
+1 verbose cli   'generator-karma' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose url raw generator-karma
+5 verbose url resolving [ 'https://registry.npmjs.org/', './generator-karma' ]
+6 verbose url resolved https://registry.npmjs.org/generator-karma
+7 info trying registry request attempt 1 at 19:08:01
+8 verbose etag "DBQW8RGP2441NGMBP5HIJLUTB"
+9 http GET https://registry.npmjs.org/generator-karma
+10 http 304 https://registry.npmjs.org/generator-karma
+11 silly registry.get cb [ 304,
+11 silly registry.get   { date: 'Thu, 29 May 2014 18:08:02 GMT',
+11 silly registry.get     server: 'Apache',
+11 silly registry.get     via: '1.1 varnish',
+11 silly registry.get     'last-modified': 'Thu, 29 May 2014 18:08:02 GMT',
+11 silly registry.get     'cache-control': 'max-age=1',
+11 silly registry.get     etag: '"DBQW8RGP2441NGMBP5HIJLUTB"',
+11 silly registry.get     'x-served-by': 'cache-fra1224-FRA',
+11 silly registry.get     'x-cache': 'MISS',
+11 silly registry.get     'x-cache-hits': '0',
+11 silly registry.get     'x-timer': 'S1401386882.349256,VS0,VE274',
+11 silly registry.get     vary: 'Accept',
+11 silly registry.get     'content-length': '0',
+11 silly registry.get     'keep-alive': 'timeout=10, max=50',
+11 silly registry.get     connection: 'Keep-Alive' } ]
+12 verbose etag generator-karma from cache
+13 info outdated updating [ [ '/usr/local/lib',
+13 info outdated     'generator-karma',
+13 info outdated     '0.6.0',
+13 info outdated     '0.8.1',
+13 info outdated     '0.8.1',
+13 info outdated     '*' ] ]
+14 verbose install where,what [ '/usr/local/lib', [ 'generator-karma@0.8.1' ] ]
+15 verbose cache add [ 'generator-karma@0.8.1', null ]
+16 verbose cache add name=undefined spec="generator-karma@0.8.1" args=["generator-karma@0.8.1",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'generator-karma@0.8.1',
+17 verbose parsed url   path: 'generator-karma@0.8.1',
+17 verbose parsed url   href: 'generator-karma@0.8.1' }
+18 verbose cache add name="generator-karma" spec="0.8.1" args=["generator-karma","0.8.1"]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: '0.8.1',
+19 verbose parsed url   path: '0.8.1',
+19 verbose parsed url   href: '0.8.1' }
+20 verbose addNamed [ 'generator-karma', '0.8.1' ]
+21 verbose addNamed [ '0.8.1', '0.8.1' ]
+22 silly lockFile 0ca35781-generator-karma-0-8-1 generator-karma@0.8.1
+23 verbose lock generator-karma@0.8.1 /Users/xvost/.npm/0ca35781-generator-karma-0-8-1.lock
+24 verbose registry.get generator-karma not expired, no request
+25 silly lockFile 0ca35781-generator-karma-0-8-1 generator-karma@0.8.1
+26 silly lockFile 0ca35781-generator-karma-0-8-1 generator-karma@0.8.1
+27 silly resolved [ { name: 'generator-karma',
+27 silly resolved     version: '0.8.1',
+27 silly resolved     description: 'Yeoman generator for Karma',
+27 silly resolved     license: 'BSD',
+27 silly resolved     main: 'app/index.js',
+27 silly resolved     repository: { type: 'git', url: 'git://github.com/yeoman/generator-karma' },
+27 silly resolved     author: { name: 'The Yeoman Team' },
+27 silly resolved     engines: { node: '>=0.10.0', npm: '>=1.2.10' },
+27 silly resolved     scripts: { test: 'mocha --reporter spec' },
+27 silly resolved     files: [ 'app', 'templates' ],
+27 silly resolved     keywords: [ 'yeoman-generator', 'scaffold', 'test', 'runner', 'karma' ],
+27 silly resolved     dependencies: { underscore: '^1.6.0', 'yeoman-generator': '^0.17.0' },
+27 silly resolved     devDependencies: { mocha: '*' },
+27 silly resolved     peerDependencies: { yo: '>=1.0.0' },
+27 silly resolved     readme: '# Karma generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-karma.svg?branch=master)](http://travis-ci.org/yeoman/generator-karma)\n\nSee the [Karma documentation](http://karma-runner.github.com/) for more info.\n\n\n## Why Karma?\n\nKarma runs the tests in the browser, but reports them in the CLI. This greatly improves your workflow by giving you constant, accurate feedback on the status of your tests.\n\n\n## Usage\n\nInstall it globally `npm install -g generator-karma`.\n\nRunning `yo karma` will generate a config file for your project: `karma.conf.js`. It will then install the npm dependencies.\n\nBy default, running `yo karma` will generate a pretty boring (and almost useless) config file. The real power is using the options to specify almost every part of the config file.\n\nNote that you\'ll need to update your `Gruntfile.js` if you don\'t specify the `--gruntfile-path` option.\n\n\n## Options\n\nThere are a lot of options going on here. None of them are required and most are probably only useful when used with other generators calling this one.\n\nOptions are specified after `yo karma`. Example:\n\n`yo karma --skip-install --test-framework=jasmine --app-files=\'app/**/*.js,public/**/*.js\'`\n\nThe full list:\n\n * `--skip-install` Type: Boolean, Default: false\n\n  Skips the automatic execution of `npm` after scaffolding has finished.\n\n * `--coffee` Type: Boolean, Default: false\n\n  Use CoffeeScript instead of JavaScript.\n\n * `--test-framework` Type: String, Default: \'jasmine\'\n\n  Specifies which testing framework to use.\n\n * `--browsers` Type: String, Default: \'PhantomJS\'\n\n  What browsers to test in (CSV list).\n\n * `--app-files` Type: String, Default: \'\'\n\n  List of application files (CSV list). There are purely the files you edit that make up your test.\n\n * `--test-files` Type: String, Default: \'\'\n\n  List of test files (CSV list), including spec and mock files.\n\n * `--exclude-files` Type: String, Default: \'\'\n\n  List of files to exclude (CSV list). Files you don\'t want tested.\n\n * `--plugins` Type: String, Default: \'\'\n\n  Specify Karma plugins (npm modules). Use the full name like `karma-junit-reporter`.\n\n * `--bower-components` Type: String, Default: \'\'\n\n  Optional components to use for testing (CSV list of components).\n\n * `--bower-components-path` Type: String, Default: \'bower_components\'\n\n  Directory where Bower components are installed, if not in the default location.\n\n * `--travis` Type: Boolean, Default: false\n\n  Enable [Travis CI](https://travis-ci.org/) config generation by adding a .travis.yaml file.\n\n * `--gruntfile-path` Type: String, Default: \'\'\n\n  Path to a Gruntfile to edit. This is relative to your generators root directory. In other words, relative to `this.destinationRoot()` path.\n\n * `--base-path` Type: String, Default: \'\'\n\n  Will be used to resolve files and exclude in the `karma.conf.js` file.\n\n * `--web-port` Type: Number, Default: 8080\n\n  Web server port to run Karma from.\n\n * `--template-path` Type: String, Default: \'../templates\'\n\n  If you would like to specify a different template to use, give the path to that folder.\n\n * `--config-file` Type: String, Default: \'\'\n\n  The config file name to write to. Useful if you want a different name like `karma-e2e.conf.js`.\n\n * `--config-path` Type: String, Default: \'./test\'\n\n  Path where the config files should be written to. This is where the `karma.conf.js` file will be placed.\n\n\n## Configuration\n\nKarma can be configured by editing `karma.conf.js`. See the documentation page on the [config file](http://karma-runner.github.com/0.12/config/configuration-file.html) for an exhaustive list of options.\n\n\n## Contribute\n\nSee the [contributing docs](https://github.com/yeoman/yeoman/blob/master/contributing.md)\n\n\n## License\n\n[BSD license](http://opensource.org/licenses/bsd-license.php)\n',
+27 silly resolved     readmeFilename: 'readme.md',
+27 silly resolved     bugs: { url: 'https://github.com/yeoman/generator-karma/issues' },
+27 silly resolved     homepage: 'https://github.com/yeoman/generator-karma',
+27 silly resolved     _id: 'generator-karma@0.8.1',
+27 silly resolved     _shasum: 'a82aef15b85b6c619e08871a373ce8edd3ccdd90',
+27 silly resolved     _from: 'generator-karma@0.8.1',
+27 silly resolved     _resolved: 'https://registry.npmjs.org/generator-karma/-/generator-karma-0.8.1.tgz' } ]
+28 info install generator-karma@0.8.1 into /usr/local/lib
+29 info installOne generator-karma@0.8.1
+30 info /usr/local/lib/node_modules/generator-karma unbuild
+31 info preuninstall generator-karma@0.6.0
+32 info uninstall generator-karma@0.6.0
+33 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild generator-karma@0.6.0
+34 info postuninstall generator-karma@0.6.0
+35 info /usr/local/lib/node_modules/generator-karma unbuild
+36 info preuninstall generator-karma@0.6.0
+37 info uninstall generator-karma@0.6.0
+38 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild generator-karma@0.6.0
+39 info postuninstall generator-karma@0.6.0
+40 error error rolling back Error: EACCES, unlink '/usr/local/lib/node_modules/generator-karma'
+40 error error rolling back  generator-karma@0.8.1 { [Error: EACCES, unlink '/usr/local/lib/node_modules/generator-karma']
+40 error error rolling back   errno: 3,
+40 error error rolling back   code: 'EACCES',
+40 error error rolling back   path: '/usr/local/lib/node_modules/generator-karma' }
+41 error Error: EACCES, unlink '/usr/local/lib/node_modules/generator-karma'
+41 error  { [Error: EACCES, unlink '/usr/local/lib/node_modules/generator-karma']
+41 error   errno: 3,
+41 error   code: 'EACCES',
+41 error   path: '/usr/local/lib/node_modules/generator-karma' }
+42 error Please try running this command again as root/Administrator.
+43 error System Darwin 13.1.0
+44 error command "/usr/local/bin/node" "/usr/local/bin/npm" "update" "-g" "generator-karma"
+45 error cwd /Users/xvost/Code/korobov
+46 error node -v v0.10.28
+47 error npm -v 1.4.9
+48 error path /usr/local/lib/node_modules/generator-karma
+49 error code EACCES
+50 error errno 3
+51 error stack Error: EACCES, unlink '/usr/local/lib/node_modules/generator-karma'
+52 verbose exit [ 3, true ]
